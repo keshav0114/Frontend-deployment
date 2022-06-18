@@ -14,11 +14,11 @@ export default function Feed({ username }) {
     const fetchPosts = async () => {
       const res = username
         ? await axios.get(
-            "http://hello-social-app.herokuapp.com/api/posts/profile/" +
+            "https://hello-social-app.herokuapp.com/api/posts/profile/" +
               username
           )
         : await axios.get(
-            "http://hello-social-app.herokuapp.com/api/posts/timeline/" +
+            "https://hello-social-app.herokuapp.com/api/posts/timeline/" +
               user._id
           );
       setPosts(

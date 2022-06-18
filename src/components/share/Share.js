@@ -30,14 +30,14 @@ export default function Share() {
       newPost.img = fileName;
       try {
         await axios.post(
-          "http://hello-social-app.herokuapp.com/api/upload",
+          "https://hello-social-app.herokuapp.com/api/upload",
           data
         );
       } catch (err) {}
     }
     try {
       await axios.post(
-        "http://hello-social-app.herokuapp.com/api/posts",
+        "https://hello-social-app.herokuapp.com/api/posts",
         newPost
       );
       window.location.reload();

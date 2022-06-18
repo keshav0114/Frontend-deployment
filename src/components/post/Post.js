@@ -20,7 +20,9 @@ export default function Post({ post }) {
   const likeHandler = () => {
     try {
       axios.put(
-        "http://hello-social-app.herokuapp.com/api/posts/" + post._id + "/like",
+        "https://hello-social-app.herokuapp.com/api/posts/" +
+          post._id +
+          "/like",
         { userId: currentUser._id }
       );
     } catch (err) {}
@@ -31,7 +33,7 @@ export default function Post({ post }) {
   useEffect(() => {
     const fetchUser = async () => {
       const res = await axios.get(
-        `http://hello-social-app.herokuapp.com/api/users?userId=${post.userId}`
+        `https://hello-social-app.herokuapp.com/api/users?userId=${post.userId}`
       );
       // console.log(res)
       setUser(res.data);
