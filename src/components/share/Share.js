@@ -29,11 +29,17 @@ export default function Share() {
       data.append("file", file);
       newPost.img = fileName;
       try {
-        await axios.post("/upload", data);
+        await axios.post(
+          "http://hello-social-app.herokuapp.com/api/upload",
+          data
+        );
       } catch (err) {}
     }
     try {
-      await axios.post("/posts", newPost);
+      await axios.post(
+        "http://hello-social-app.herokuapp.com/api/posts",
+        newPost
+      );
       window.location.reload();
     } catch (err) {}
   };
