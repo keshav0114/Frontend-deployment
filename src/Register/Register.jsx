@@ -23,7 +23,7 @@ function Register() {
       };
       try {
         const res = await axios.post(
-          "https://hello-social-app.herokuapp.com/api/auth/register",
+          "https://arcane-brushlands-68997.herokuapp.com/api/auth/register",
           user
         );
         console.log(res);

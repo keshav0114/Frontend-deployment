@@ -47,7 +47,7 @@ function Login() {
             />
             <button className="loginButton" type="submit" disabled={isFetching}>
               {isFetching ? (
-                <CircularProgress color="white" size="20px" />
+                <CircularProgress style={{ color: "white" }} size="20px" />
               ) : (
                 "Log In"
               )}
