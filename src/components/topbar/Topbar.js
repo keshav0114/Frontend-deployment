@@ -3,6 +3,7 @@ import "./Topbar.css";
 import { Search, Person, Chat, Notifications } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function Topbar() {
   const { user } = useContext(AuthContext);
@@ -12,6 +13,8 @@ function Topbar() {
   // localStorage.removeItem(user);
   //   console.log("clicked");
   // };
+
+  let navigate = useNavigate();
 
   return (
     <div className="topbarContainer">
@@ -63,6 +66,7 @@ function Topbar() {
         <button
           onClick={() => {
             localStorage.removeItem("user");
+            navigate("/login");
             window.location.reload();
           }}
           className="logoutbtn"
