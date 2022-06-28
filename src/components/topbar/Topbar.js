@@ -66,7 +66,7 @@ function Topbar() {
         <button
           onClick={() => {
             localStorage.removeItem("user");
-            navigate("/login");
+            navigate("/");
             window.location.reload();
           }}
           className="logoutbtn"
