@@ -17,7 +17,7 @@ export default function Rightbar({ user }) {
     const getFriends = async () => {
       try {
         const friendList = await axios.get(
-          "https://arcane-brushlands-68997.herokuapp.com/api/users/friends/" +
+          "https://hello-social-backend.onrender.com/api/users/friends/" +
             user._id
         );
         setFriends(friendList.data);
@@ -55,7 +55,7 @@ export default function Rightbar({ user }) {
       try {
         if (followed) {
           await axios.put(
-            `https://arcane-brushlands-68997.herokuapp.com/api/users/${user._id}/unfollow`,
+            `https://hello-social-backend.onrender.com/api/users/${user._id}/unfollow`,
             {
               userId: currentUser._id,
             }
@@ -63,7 +63,7 @@ export default function Rightbar({ user }) {
           dispatch({ type: "UNFOLLOW", payload: user._id });
         } else {
           await axios.put(
-            `https://arcane-brushlands-68997.herokuapp.com/api/users/${user._id}/follow`,
+            `https://hello-social-backend.onrender.com/api/users/${user._id}/follow`,
             {
               userId: currentUser._id,
             }

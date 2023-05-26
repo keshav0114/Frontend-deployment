@@ -20,7 +20,7 @@ export default function Post({ post }) {
   const likeHandler = () => {
     try {
       axios.put(
-        "https://arcane-brushlands-68997.herokuapp.com/api/posts/" +
+        "https://hello-social-backend.onrender.com/api/posts/" +
           post._id +
           "/like",
         { userId: currentUser._id }
@@ -33,7 +33,7 @@ export default function Post({ post }) {
   useEffect(() => {
     const fetchUser = async () => {
       const res = await axios.get(
-        `https://arcane-brushlands-68997.herokuapp.com/api/users?userId=${post.userId}`
+        `https://hello-social-backend.onrender.com/api/users?userId=${post.userId}`
       );
       // console.log(res)
       setUser(res.data);

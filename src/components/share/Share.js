@@ -31,14 +31,14 @@ export default function Share() {
         newPost.img = fileName;
         try {
           await axios.post(
-            "https://arcane-brushlands-68997.herokuapp.com/api/upload",
+            "https://hello-social-backend.onrender.com/api/upload",
             data
           );
         } catch (err) {}
       }
       try {
         await axios.post(
-          "https://arcane-brushlands-68997.herokuapp.com/api/posts",
+          "https://hello-social-backend.onrender.com/api/posts",
           newPost
         );
         window.location.reload();

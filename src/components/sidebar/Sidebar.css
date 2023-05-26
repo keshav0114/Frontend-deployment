@@ -3,6 +3,7 @@
   align-self: flex-start;
   height: calc(100vh - 50px);
   top: 50px;
+  left: 0;
   overflow-y: scroll;
   position: -webkit-sticky;
   position: sticky;

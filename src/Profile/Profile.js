@@ -15,7 +15,7 @@ export default function Profile() {
   useEffect(() => {
     const fetchUser = async () => {
       const res = await axios.get(
-        `https://arcane-brushlands-68997.herokuapp.com/api/users?username=${username}`
+        `https://hello-social-backend.onrender.com/api/users?username=${username}`
       );
       setUser(res.data);
     };

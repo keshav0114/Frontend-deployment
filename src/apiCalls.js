@@ -4,7 +4,7 @@ export const loginCall = async (userCredential, dispatch) => {
   dispatch({ type: "LOGIN_START" });
   try {
     const res = await axios.post(
-      "https://arcane-brushlands-68997.herokuapp.com/api/auth/login",
+      "https://hello-social-backend.onrender.com/api/auth/login",
       userCredential
     );
     console.log(res);
